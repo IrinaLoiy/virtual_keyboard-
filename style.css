@@ -1,60 +1,90 @@
-.body {
+* {
     margin: 0;
-}
-
-.container {
-    width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    font-family: "Trebuchet MS", "Helvetica", sans-serif;
-}
-
-.header-text {
-    font-size: 30px;
-    color: rgba(101,134,177,0.8);
-    -webkit-text-stroke: 1px rgba(114,177,101,0.8);
-    -webkit-text-fill-color: rgba(101,134,177,0.8);
-}
-
-.textarea {
-    top: 130px;
-    right: 30px;
-    width: 300px;
-}
-
-.keyboard {
-    display: block;
-    height: 100px;
-    border: 2px solid black;
-    padding: 5px;
-    background: rgba(86, 189, 141, 0.8);
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    user-select: none;
-    transition: bottom 0.4s;
-}
-
-.keyboard_keys {
-    text-align: center;
-    height: 45px;
-    width: 6%;
-    max-width: 90px;
-    margin: 3px;
-    border-radius: 4px;
-    border: none;
-    background:rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 1.05rem;
-    outline: none;
-    cursor: pointer;
-    display: inline-flex;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    display: flex;
     align-items: center;
     justify-content: center;
-    vertical-align: top;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent;
-    position: relative;
-}
-
-.keyboard_keys:active {
-    background:rgba(255, 255, 255, 0.12);
-}
+    flex-direction: column;
+    gap: 30px;
+    height: 100vh;
+    /* margin: 0 auto; */
+  }
+  
+  .text-box {
+    min-height: 120px;
+    padding: 10px;
+    border: 3px solid gray;
+    border-radius: 10px;
+  
+    width: 1000px;
+    word-wrap: break-word;
+  }
+  
+  /* .keyboard {
+    display: flex;
+    flex-direction: column;
+  } */
+  
+  button {
+    all: unset;
+    cursor: pointer;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    padding: 20px;
+    border: 2px solid rgb(28, 28, 28);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin: 2px;
+    text-align: center;
+  }
+  
+  button:hover {
+    background-color: white;
+    color: rgb(51, 51, 51);
+  }
+  
+  .line {
+    display: flex;
+  }
+  
+  .letter {
+    width: 17px;
+    height: 17px;
+    background-color: #3a424e;
+    /* text-align: center; */
+    /* align-items: center; */
+  }
+  
+  .active {
+    background-color: green;
+    transition: all 0.3s ease;
+  }
+  
+  .active:hover {
+    background-color: green;
+  }
+  
+  #Space {
+    width: 385px;
+  }
+  
+  #Backspace {
+    width: 94px;
+  }
+  
+  #CapsLock,
+  #Enter,
+  #ShiftRight,
+  #ShiftLeft {
+    width: 88px;
+  }
+  
+  #ArrowUp,
+  #ArrowDown {
+    width: 17px;
+    height: 17px;
+  }
